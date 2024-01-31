@@ -7,6 +7,10 @@ import org.openqa.selenium.WebDriver;
 public class DangNhap extends BasePage {
     WebDriver driver;
 
+    public DangNhap(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void nhapTenGianHang(String tenGianHang) {
         sendKeyToElement(driver, DangNhapUI.TEN_GIAN_HANG, tenGianHang);
     }
@@ -19,7 +23,7 @@ public class DangNhap extends BasePage {
         sendKeyToElement(driver, DangNhapUI.MAT_KHAU, matKhau);
     }
 
-    public void clickButtonQuanLi() {
+    public void clickButtonQuanLy() {
         clickToElement(driver, DangNhapUI.BUTTON_QUAN_LY);
     }
 }
