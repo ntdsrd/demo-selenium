@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class DangNhapTC extends BaseTest {
+public class DangNhapTestCase extends BaseTest {
     DangNhap dangNhap;
     TongQuan tongQuan;
 
