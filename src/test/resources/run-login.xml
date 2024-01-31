@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DangNhapTC" thread-count="2" parallel="false">
+    <test name="Run on Firefox">
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="url" value="https://fnb.kiotviet.vn"/>
+        <classes>
+            <class name="DangNhapTC"/>
+        </classes>
+    </test>
+</suite>
