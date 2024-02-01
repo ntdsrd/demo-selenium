@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="DangNhapTestCase" thread-count="2" parallel="false">
+<suite name="DangNhapTestCase">
     <test name="Run on Firefox">
         <parameter name="browser" value="Firefox"/>
         <parameter name="url" value="https://fnb.kiotviet.vn"/>
