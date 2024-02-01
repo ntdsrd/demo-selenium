@@ -1,24 +1,20 @@
 package actions.commons;
 
 import actions.DangNhap;
+import actions.PhongBan;
 import actions.TongQuan;
 import org.openqa.selenium.WebDriver;
 
 public class PageGeneratorManager {
-    private DangNhap dangNhap;
-    private TongQuan tongQuan;
-
-    public DangNhap getDangNhapPage(WebDriver driver) {
-        if (dangNhap == null) {
-            dangNhap = new DangNhap(driver);
-        }
-        return dangNhap;
+    public static DangNhap getDangNhapPage(WebDriver driver) {
+        return new DangNhap(driver);
     }
 
-    public TongQuan getTongQuanPage(WebDriver driver) {
-        if (tongQuan == null) {
-            tongQuan = new TongQuan(driver);
-        }
-        return tongQuan;
+    public static TongQuan getTongQuanPage(WebDriver driver) {
+        return new TongQuan(driver);
+    }
+
+    public static PhongBan getPhongBanPage(WebDriver driver) {
+        return new PhongBan(driver);
     }
 }
