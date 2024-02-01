@@ -1,6 +1,7 @@
 package actions;
 
 import actions.commons.BasePage;
+import actions.commons.GlobalConstants;
 import interfaces.DangNhapUI;
 import org.openqa.selenium.WebDriver;
 
@@ -28,5 +29,12 @@ public class DangNhap extends BasePage {
 
     public void clickButtonQuanLy() {
         clickToElement(driver, DangNhapUI.BUTTON_QUAN_LY);
+    }
+
+    public void loginSuccessfully() {
+        nhapTenGianHang(GlobalConstants.TEN_GIAN_HANG);
+        nhapTenDangNhap(GlobalConstants.TEN_DANG_NHAP);
+        nhapMatKhau(GlobalConstants.MAT_KHAU);
+        clickButtonQuanLy();
     }
 }
