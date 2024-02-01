@@ -17,7 +17,7 @@ public class DangNhapTestCase extends BaseTest {
     @BeforeMethod
     public void initBrowser(String browserName, String url) {
         driver = getBrowserDriver(browserName, url);
-        PageGeneratorManager.getDangNhapPage(driver);
+        dangNhap = PageGeneratorManager.getDangNhapPage(driver);
     }
 
     @Test(description = "Đăng nhập thành công", groups = {"Group 1"})
@@ -31,7 +31,7 @@ public class DangNhapTestCase extends BaseTest {
         //step 4: click button quản lý
         dangNhap.clickButtonQuanLy();
         //step 5: kiểm tra hiển thị màn hình tổng quan
-        PageGeneratorManager.getTongQuanPage(driver);
+        tongQuan = PageGeneratorManager.getTongQuanPage(driver);
         Assert.assertTrue(tongQuan.verifyLoginSuccessfully());
     }
 
