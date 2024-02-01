@@ -14,4 +14,8 @@ public class TongQuan extends BasePage {
     public void kiemTraHienThiManHinhTongQuan() {
         waitForElementVisible(driver, TongQuanUI.TONG_QUAN_HEADER);
     }
+
+    public boolean verifyLoginSuccessfully() {
+        return isDisplayElement(driver, TongQuanUI.TONG_QUAN_HEADER);
+    }
 }
