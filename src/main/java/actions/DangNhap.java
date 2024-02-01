@@ -13,14 +13,17 @@ public class DangNhap extends BasePage {
 
     public void nhapTenGianHang(String tenGianHang) {
         sendKeyToElement(driver, DangNhapUI.TEN_GIAN_HANG, tenGianHang);
+        sleepInSecond(1);
     }
 
     public void nhapTenDangNhap(String tenDangNhap) {
         sendKeyToElement(driver, DangNhapUI.TEN_DANG_NHAP, tenDangNhap);
+        sleepInSecond(1);
     }
 
     public void nhapMatKhau(String matKhau) {
         sendKeyToElement(driver, DangNhapUI.MAT_KHAU, matKhau);
+        sleepInSecond(1);
     }
 
     public void clickButtonQuanLy() {
