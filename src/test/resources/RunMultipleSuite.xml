@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Run Multiple Suite" parallel="true">
+    <parameter name="browser" value="Firefox"/>
+    <parameter name="url" value="https://fnb.kiotviet.vn"/>
+    <suite-files>
+        <suite-file path="RunDangNhapTestCase.xml"/>
+        <suite-file path="RunPhongBanTestCase.xml"/>
+    </suite-files>
+</suite>
