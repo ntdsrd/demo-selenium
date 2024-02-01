@@ -10,7 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.time.Duration;
 
 public class BaseTest {
-    public WebDriver driver;
+    private WebDriver driver;
 
     private enum BROWSER {
         CHROME, FIREFOX, IE, SAFARI, H_CHROME, H_FIREFOX, EDGE
@@ -21,7 +21,7 @@ public class BaseTest {
     }
 
     private enum PLATFORM {
-        ANDROID, IOS
+        ANDROID, IOS, WINDOWS_PHONE
     }
 
     public WebDriver getBrowserDriver(String browserName, String url) {
