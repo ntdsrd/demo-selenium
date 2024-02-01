@@ -3,6 +3,7 @@ import actions.TongQuan;
 import actions.commons.BaseTest;
 import actions.commons.GlobalConstants;
 import actions.commons.PageGeneratorManager;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -16,10 +17,10 @@ public class DangNhapTestCase extends BaseTest {
     @BeforeMethod
     public void initBrowser(String browserName, String url) {
         driver = getBrowserDriver(browserName, url);
-        dangNhap = new PageGeneratorManager().getDangNhapPage(driver);
+        PageGeneratorManager.getDangNhapPage(driver);
     }
 
-    @Test(description = "Trường hợp đăng nhập thành công")
+    @Test(description = "Đăng nhập thành công", groups = {"Group 1"})
     public void DangNhap01() {
         //step 1: nhập tên gian hàng
         dangNhap.nhapTenGianHang(GlobalConstants.TEN_GIAN_HANG);
@@ -30,8 +31,8 @@ public class DangNhapTestCase extends BaseTest {
         //step 4: click button quản lý
         dangNhap.clickButtonQuanLy();
         //step 5: kiểm tra hiển thị màn hình tổng quan
-        tongQuan = new PageGeneratorManager().getTongQuanPage(driver);
-        tongQuan.kiemTraHienThiManHinhTongQuan();
+        PageGeneratorManager.getTongQuanPage(driver);
+        Assert.assertTrue(tongQuan.verifyLoginSuccessfully());
     }
 
     @AfterMethod
