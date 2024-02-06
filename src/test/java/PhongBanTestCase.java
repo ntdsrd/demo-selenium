@@ -1,4 +1,5 @@
 import actions.commons.BaseTest;
+import actions.commons.GlobalConstants;
 import actions.commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
@@ -13,7 +14,8 @@ public class PhongBanTestCase extends BaseTest {
     @Parameters({"browser", "url"})
     public void initBrowser(String browserName, String url) {
         driver = getBrowserDriver(browserName, url);
-        PageGeneratorManager.getDangNhapPage(driver).loginSuccessfully();
+        PageGeneratorManager.getDangNhapPage(driver).loginSuccessfully(GlobalConstants.TEN_GIAN_HANG,
+                GlobalConstants.TEN_DANG_NHAP, GlobalConstants.MAT_KHAU);
     }
 
     @Test(description = "Di chuyển tới màn hình Phòng/Bàn")
