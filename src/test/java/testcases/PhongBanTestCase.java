@@ -1,3 +1,5 @@
+package testcases;
+
 import actions.commons.BaseTest;
 import actions.commons.GlobalConstants;
 import actions.commons.PageGeneratorManager;

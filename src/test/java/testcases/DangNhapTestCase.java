@@ -1,3 +1,5 @@
+package testcases;
+
 import actions.DangNhap;
 import actions.TongQuan;
 import actions.commons.BaseTest;
